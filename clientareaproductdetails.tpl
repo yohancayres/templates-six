@@ -148,7 +148,7 @@
                 <div class="tab-content product-details-tab-container">
                     {if $domain}
                         <div class="tab-pane fade in active text-center" id="domain">
-                            {if $type eq "server"}
+                            {if ($type == "server") || (strpos($product, 'VPS') !== false)}
                                 <div class="row">
                                     <div class="col-sm-5 text-right">
                                         <strong>{$LANG.serverhostname}</strong>
